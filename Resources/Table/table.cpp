@@ -23,7 +23,7 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    setLastRetrievedAddress(QPoint(index.column(), index.row()));
+    m_lastRetrievedAddress = QPoint(index.column(), index.row());
 
     int colIndex = index.column();
     int rowIndex = index.row();
@@ -187,13 +187,6 @@ QPoint CustomTableModel::lastRetrievedAddress() const
     return m_lastRetrievedAddress;
 }
 
-void CustomTableModel::setLastRetrievedAddress(QPoint newLastRetrievedAddress) const
-{
-    if (m_lastRetrievedAddress == newLastRetrievedAddress)
-        return;
-    m_lastRetrievedAddress = newLastRetrievedAddress;
-}
-
 int CustomTableModel::rowCount(const QModelIndex &parent) const
 {
     return m_rowCount;
@@ -322,13 +315,6 @@ bool CustomTableModel::deserialize(const nlohmann::json& source)
 QVariant CustomTableModel::lastRetrievedValue() const
 {
     return m_lastRetrievedValue;
-}
-
-void CustomTableModel::setLastRetrievedValue(const QVariant &newLastRetrievedValue) const
-{
-    if (m_lastRetrievedValue == newLastRetrievedValue)
-        return;
-    m_lastRetrievedValue = newLastRetrievedValue;
 }
 
 

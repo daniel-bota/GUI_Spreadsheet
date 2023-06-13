@@ -78,7 +78,7 @@ bool HeadersModel::removeRows(int row, int count, const QModelIndex &parent)
 
 QString HeadersModel::columnTitle(int index) const
 {
-    setLastRetrievedIndex(index);
+    m_lastRetrievedIndex = index;
     if (index == 0)
     {
         return "A";
@@ -101,7 +101,7 @@ QString HeadersModel::columnTitle(int index) const
 
 QString HeadersModel::rowTitle(int index) const
 {
-    setLastRetrievedIndex(index);
+    m_lastRetrievedIndex = index;
     std::string title = std::to_string(index + 1);
     return QString::fromStdString(title);
 }
@@ -133,11 +133,4 @@ void HeadersModel::triggered(QString message)
 int HeadersModel::lastRetrievedIndex() const
 {
     return m_lastRetrievedIndex;
-}
-
-void HeadersModel::setLastRetrievedIndex(int newLastRetrievedIndex) const
-{
-    if (m_lastRetrievedIndex == newLastRetrievedIndex)
-        return;
-    m_lastRetrievedIndex = newLastRetrievedIndex;
 }

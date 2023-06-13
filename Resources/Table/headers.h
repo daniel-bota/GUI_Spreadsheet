@@ -8,7 +8,7 @@ class HeadersModel : public QAbstractListModel
 {
     Q_OBJECT
     Q_PROPERTY(int visibleHeaders READ visibleHeaders WRITE setVisibleHeaders NOTIFY visibleHeadersChanged)
-    Q_PROPERTY(int lastRetrievedIndex READ lastRetrievedIndex WRITE setLastRetrievedIndex CONSTANT)
+    Q_PROPERTY(int lastRetrievedIndex READ lastRetrievedIndex CONSTANT)
 public:
     explicit HeadersModel(QObject *parent = nullptr);
 
@@ -38,7 +38,6 @@ public:
     Q_INVOKABLE void triggered(QString message);
 
     int lastRetrievedIndex() const;
-    void setLastRetrievedIndex(int newLastRetrievedIndex) const;
 
 signals:
 

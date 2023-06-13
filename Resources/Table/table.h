@@ -17,8 +17,8 @@ class CustomTableModel : public QAbstractTableModel
     Q_PROPERTY(int rowCount READ rowCount WRITE setRowCount NOTIFY rowCountChanged)
     Q_PROPERTY(int columnCount READ columnCount WRITE setColumnCount NOTIFY columnCountChanged)
 
-    Q_PROPERTY(QPoint lastRetrievedAddress READ lastRetrievedAddress WRITE setLastRetrievedAddress CONSTANT)
-    Q_PROPERTY(QVariant lastRetrievedValue READ lastRetrievedValue WRITE setLastRetrievedValue CONSTANT)
+    Q_PROPERTY(QPoint lastRetrievedAddress READ lastRetrievedAddress CONSTANT)
+    Q_PROPERTY(QVariant lastRetrievedValue READ lastRetrievedValue CONSTANT)
 
     Q_PROPERTY(Sheet sheet READ sheet WRITE setSheet NOTIFY sheetChanged)
 
@@ -54,7 +54,6 @@ public:
     bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex()) override;
 
     QPoint lastRetrievedAddress() const;
-    void setLastRetrievedAddress (QPoint newLastRetrievedAddress) const;
 
     //    Q_INVOKABLE void update();
 
@@ -83,7 +82,6 @@ public:
     Q_INVOKABLE void clear();
 
     QVariant lastRetrievedValue() const;
-    void setLastRetrievedValue(const QVariant &newLastRetrievedValue) const;
 
 signals:
     //    void columnHeadersChanged();
@@ -95,8 +93,6 @@ signals:
     void columnCountChanged();
 
     void sheetChanged();
-
-    void lastRetrievedValueChanged();
 
 private:
     mutable QPoint m_lastRetrievedAddress = {0, 0};

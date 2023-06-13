@@ -11,4 +11,7 @@ In order to run this project in Qt Creator, you need to:
 - under Qt, check at least version 6.5.1
 - under Qt version, check MSVC 2019 64-bit
 - under Developer and Designer Tools, check the latest version of Qt Creator, and the provided version of CMake and Ninja
-4. Open CMakeLists.txt with Qt Creator
+4. Install Visual Studio and C++ build tools (https://visualstudio.microsoft.com/). During installation, make sure to check "Desktop development with C++".
+5. Open CMakeLists.txt with Qt Creator
+6. In the "Configure Project" window, select "Desktop Qt \<VERSION\> MSVC2019 64bit" kit and, under Details, select the build type of your choosing. Qt Creator should automatically find the MSVC compiler and link it to the active build kit. Otherwise, you must provide the compiler path manually  by opening the "Manage Kits..." dialog.
+7. Press "Configure Project".
