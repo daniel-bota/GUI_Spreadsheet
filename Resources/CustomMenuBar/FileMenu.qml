@@ -19,7 +19,7 @@ Menu
     background: Rectangle
     {
         implicitWidth: 200
-        color: parent.background.color
+        color: menuBar.background.color
     }
 
     delegate: MenuItem
