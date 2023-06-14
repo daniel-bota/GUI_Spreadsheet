@@ -22,9 +22,6 @@ class CustomTableModel : public QAbstractTableModel
 
     Q_PROPERTY(Sheet sheet READ sheet WRITE setSheet NOTIFY sheetChanged)
 
-    //    Q_PROPERTY(HeadersModel* columnHeaders READ columnHeaders WRITE setColumnHeaders NOTIFY columnHeadersChanged)
-    //    Q_PROPERTY(HeadersModel* rowHeaders READ rowHeaders WRITE setRowHeaders NOTIFY rowHeadersChanged)
-
 public:
     explicit CustomTableModel(QObject* parent = nullptr);
 
@@ -55,14 +52,6 @@ public:
 
     QPoint lastRetrievedAddress() const;
 
-    //    Q_INVOKABLE void update();
-
-    //    HeadersModel *columnHeaders() const;
-    //    void setColumnHeaders(HeadersModel *newColumns);
-
-    //    HeadersModel *rowHeaders() const;
-    //    void setRowHeaders(HeadersModel *newRows);
-
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     void setRowCount(int newRowCount);
 
@@ -84,9 +73,6 @@ public:
     QVariant lastRetrievedValue() const;
 
 signals:
-    //    void columnHeadersChanged();
-
-    //    void rowHeadersChanged();
 
     void rowCountChanged();
 
@@ -105,9 +91,6 @@ private:
     QString rowTitle(int index) const;
 
     Sheet m_sheet;
-
-    //    HeadersModel *m_columnHeaders = nullptr;
-    //    HeadersModel *m_rowHeaders = nullptr;
 
     void RefreshChangedCells(const Address& initialAddress, const std::vector<Address>& changedAddresses);
 };
