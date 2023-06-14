@@ -15,3 +15,18 @@ In order to run this project in Qt Creator, you need to:
 5. Open CMakeLists.txt with Qt Creator
 6. In the "Configure Project" window, select "Desktop Qt \<VERSION\> MSVC2019 64bit" kit and, under Details, select the build type of your choosing. Qt Creator should automatically find the MSVC compiler and link it to the active build kit. Otherwise, you must provide the compiler path manually  by opening the "Manage Kits..." dialog.
 7. Press "Configure Project".
+
+Implemented formulas:
+
+- Reference (=A1)
+- Range (A1:B5)
+- SUM (=SUM(arg1;arg2;...))
+- COUNT (=COUNT(...))
+- AVERAGE (=AVG(...))
+- MINIMUM (=MIN(...))
+- MAXIMUM (=MAX(...))
+- MODULUS (=MOD(arg1;arg2))
+- POWER (=POW(arg1;arg2))
+- LENGTH (=LEN(arg1))
+- TRIM (=TRIM(arg1))
+- CONCATENATE (=CONCAT(arg1;arg2))
