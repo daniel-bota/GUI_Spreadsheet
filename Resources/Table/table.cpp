@@ -213,7 +213,7 @@ void CustomTableModel::setColumnCount(int newColumnCount)
     emit columnCountChanged();
 }
 
-void CustomTableModel::triggered(QString message)
+void CustomTableModel::triggered(const QString& message)
 {
     QString output = QString("triggered") + ' ' + message;
     qDebug() << output;

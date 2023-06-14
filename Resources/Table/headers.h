@@ -35,7 +35,7 @@ public:
 
     void setVisibleHeaders(int newVisibleHeaders);
 
-    Q_INVOKABLE void triggered(QString message);
+    Q_INVOKABLE void triggered(const QString& message);
 
     int lastRetrievedIndex() const;
 

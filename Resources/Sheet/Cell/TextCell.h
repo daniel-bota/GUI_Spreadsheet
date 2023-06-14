@@ -4,8 +4,8 @@
 class TextCell : public Cell
 {
 public:
-	TextCell(Address address, Sheet* sheet);
-	TextCell(Address address, Sheet* sheet, std::string newValue);
+    TextCell(const Address& address, Sheet* sheet);
+    TextCell(const Address& address, Sheet* sheet, const std::string& newValue);
 	std::string ValueString() const override;
 };
 

@@ -12,14 +12,13 @@ class Cell
 {
 public:
 	virtual ~Cell() = default;
-	Cell() = default;
-	Cell(Address address, Sheet* sheet);
+    explicit Cell(Address address, Sheet* sheet);
 
 	//virtual ValueString
-	virtual std::string ValueString() const = 0;
-	virtual std::variant<std::monostate, std::string, double> Value() const { return value; }
-	std::string Title() const { return title; }
-	Address GetAddress() const { return address; }
+    virtual std::string ValueString() const = 0;
+    virtual const std::variant<std::monostate, std::string, double>& Value() const { return value; }
+    const std::string& Title() const { return title; }
+    const Address& GetAddress() const { return address; }
 	const std::vector<Address>& Referencing() const { return referencing; }
 	void SetReferencingCells(const std::vector<Address>& newReferencing);
     void AddReferencingCell(const Address& address);
@@ -28,14 +27,14 @@ public:
     void NotifyReferencingCells(const Address& notificationSource);
 
 protected:
-	void GenerateTitle(std::string colTitle, std::string rowTitle);
+    void GenerateTitle(const std::string& colTitle, const std::string& rowTitle);
 	std::string GenerateRowTitle(int index) const;
 	std::string GenerateColTitle(int index) const;
 
 	class Address address { -1, -1 };
 	std::string title{ "" };
 	std::variant<std::monostate, std::string, double> value;
-	Sheet* sheet = nullptr;
+    Sheet* sheet;
 	std::vector<Address> referencing{};
 };
 

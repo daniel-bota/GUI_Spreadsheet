@@ -48,7 +48,7 @@ void Cell::NotifyReferencingCells(const Address& notificationSource)
 	}
 }
 
-void Cell::GenerateTitle(std::string colTitle, std::string rowTitle)
+void Cell::GenerateTitle(const std::string& colTitle, const std::string& rowTitle)
 {
 	title = std::format("{}{}", colTitle, rowTitle);
 }

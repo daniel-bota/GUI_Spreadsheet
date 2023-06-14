@@ -5,7 +5,7 @@
 #include "Cell/NumericCell.h"
 #include "Misc/Misc.h"
 
-void Sheet::AddCell(Address address, std::string input)
+void Sheet::AddCell(const Address& address, const std::string& input)
 {
 	std::shared_ptr<Cell> cellPtr = nullptr;
 	if (values.contains(address))
@@ -69,7 +69,7 @@ void Sheet::AddCell(std::shared_ptr<Cell> cell)
 	values[cell->GetAddress()] = cell;
 }
 
-Address Sheet::CellTitleToAddress(std::string title)
+Address Sheet::CellTitleToAddress(const std::string& title)
 {
 	auto firstDigitIndex = std::ranges::find_if(title, [](const char& c) { return std::isdigit(c); }) - title.begin();
 	std::string colTitle = title.substr(0, firstDigitIndex);
@@ -85,14 +85,15 @@ Address Sheet::CellTitleToAddress(std::string title)
 	return Address{ colIndex, rowIndex };
 }
 
-int Sheet::ColTitleToIndex(std::string colTitle)
+int Sheet::ColTitleToIndex(const std::string& colTitle)
 {
+    auto input = colTitle;
 	const int base = 26;
 	int result = 0;
-	for (char c : colTitle)
+    for (char c : input)
 	{
-		colTitle.erase(colTitle.begin());
-		result += (c - 'A' + 1) * static_cast<int>(pow(base, colTitle.size()));
+        input.erase(input.begin());
+        result += (c - 'A' + 1) * static_cast<int>(pow(base, input.size()));
 	}
 
 	return result - 1;

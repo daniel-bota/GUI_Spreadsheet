@@ -124,7 +124,7 @@ void HeadersModel::setVisibleHeaders(int newVisibleHeaders)
     emit visibleHeadersChanged();
 }
 
-void HeadersModel::triggered(QString message)
+void HeadersModel::triggered(const QString& message)
 {
     QString output = QString("triggered") + ' ' + message;
     qDebug() << output;

@@ -92,7 +92,7 @@ TableView
             anchors.fill: parent
             text: model.display
             horizontalAlignment: typeof(value) === "number" ? Text.AlignRight : Text.AlignLeft
-            verticalAlignment: Text.AlignVCenter
+            verticalAlignment: Text.AlignBottom
             leftPadding: 4
             rightPadding: 4
             wrapMode: Text.Wrap
@@ -115,14 +115,15 @@ TableView
         {
             id: inputField
             anchors.fill: parent
+            color: "black"
 
             background: Rectangle
             {
-                border.color: "red"
+                border.color: "orange"
                 border.width: 2
             }
 
-            verticalAlignment: Text.AlignVCenter
+            verticalAlignment: Text.AlignBottom
             text: table.editEvent == "" ? display : table.editEvent
 
             TableView.onCommit:

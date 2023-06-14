@@ -3,7 +3,7 @@
 #include "FormulaCell.h"
 #include "../Misc/Misc.h"
 
-Formula::Formula(Sheet* sheet, Address address, std::string expression) : sheet(sheet), address(address), expression(expression)
+Formula::Formula(Sheet* sheet, const Address& address, const std::string& expression) : sheet(sheet), address(address), expression(expression)
 {
 	Parse();
 }
@@ -19,13 +19,14 @@ void Formula::Parse(bool removeDependencies)
 	value = Compute(formula, removeDependencies);
 }
 
-std::variant<std::monostate, std::string, double> Formula::Value() const
+const std::variant<std::monostate, std::string, double>& Formula::Value() const
 {
 	return value;
 }
 
-std::variant<std::monostate, std::string, double> Formula::Compute(std::string input, bool removeDependencies)
+std::variant<std::monostate, std::string, double> Formula::Compute(const std::string& term, bool removeDependencies)
 {
+    std::string input = term;
 	std::variant<std::monostate, std::string, double> result;
 
 	if (IsString(input))
@@ -71,7 +72,7 @@ std::variant<std::monostate, std::string, double> Formula::Compute(std::string i
 	return Compute(formula, params, removeDependencies);
 }
 
-std::variant<std::monostate, std::string, double> Formula::Compute(std::string formula, std::vector<std::string>& params, bool removeDependencies)
+std::variant<std::monostate, std::string, double> Formula::Compute(const std::string& formula, std::vector<std::string>& params, bool removeDependencies)
 {
 	for (auto it = params.begin(); it < params.end(); it++)
 	{
@@ -96,7 +97,7 @@ std::variant<std::monostate, std::string, double> Formula::Compute(std::string f
 	return Invalid("Invalid syntax!");
 }
 
-std::variant<std::monostate, std::string, double> Formula::ComputeReference(std::string reference, bool removeDependencies)
+std::variant<std::monostate, std::string, double> Formula::ComputeReference(const std::string& reference, bool removeDependencies)
 {
 	auto dependencyAddress = sheet->CellTitleToAddress(reference);
 	if (!sheet->Values().contains(dependencyAddress))
@@ -322,37 +323,37 @@ std::vector<std::variant<std::monostate, std::string, double>> Formula::ComputeP
 	return result;
 }
 
-std::variant<std::monostate, std::string, double> Formula::Invalid(std::string message)
+std::variant<std::monostate, std::string, double> Formula::Invalid(const std::string& message)
 {
 	valid = false;
 	errorMessage = message;
 	return std::monostate{};
 }
 
-std::variant<std::monostate, std::string, double> Formula::Invalid(std::string message, std::string element)
+std::variant<std::monostate, std::string, double> Formula::Invalid(const std::string& message, const std::string& element)
 {
 	valid = false;
 	errorMessage = std::format("{}{}", message, element);
 	return std::monostate{};
 }
 
-bool Formula::IsString(std::string input)
+bool Formula::IsString(const std::string& input)
 {
 	return input.front() == '\"' && input.back() == '\"';
 }
 
-bool Formula::IsNumber(std::string input, double& output)
+bool Formula::IsNumber(const std::string& input, double& output)
 {
 	return Misc::IsNumber(input, output);
 }
 
-bool Formula::IsReference(std::string input)
+bool Formula::IsReference(const std::string& input)
 {
 	auto refSyntax = std::regex("^[a-z]+[1-9][0-9]*$", std::regex_constants::icase);
 	return std::regex_match(input, refSyntax);
 }
 
-bool Formula::IsRefRange(std::string input, std::vector<std::string>& output)
+bool Formula::IsRefRange(const std::string& input, std::vector<std::string>& output)
 {
 	int separatorIndex = static_cast<int>(input.find_first_of(':'));
 

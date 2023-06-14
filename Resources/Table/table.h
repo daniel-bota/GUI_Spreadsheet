@@ -58,7 +58,7 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     void setColumnCount(int newColumnCount);
 
-    Q_INVOKABLE void triggered(QString message);
+    Q_INVOKABLE void triggered(const QString& message);
 
     Q_INVOKABLE QVariant cellValue(const QModelIndex& index = QModelIndex()) const;
 

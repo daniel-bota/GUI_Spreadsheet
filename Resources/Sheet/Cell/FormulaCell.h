@@ -12,19 +12,19 @@ enum Status
 class FormulaCell : public Cell
 {
 public:
-	FormulaCell(Address address, Sheet* sheet) : Cell(address, sheet) {};
-	FormulaCell(Address address, Sheet* sheet, Formula formula) : Cell(address, sheet), formula(formula) {};
+    FormulaCell(const Address& address, Sheet* sheet) : Cell(address, sheet) {};
+    FormulaCell(const Address& address, Sheet* sheet, const Formula& formula) : Cell(address, sheet), formula(formula) {};
 
-	std::variant<std::monostate, std::string, double> GetUpdated();
-	std::variant<std::monostate, std::string, double> Value() const override;
-	std::string ValueString() const override;
+    const std::variant<std::monostate, std::string, double>& GetUpdated();
+    const std::variant<std::monostate, std::string, double>& Value() const override;
+    std::string ValueString() const override;
 
 	const std::string& Expression() const;
 	const std::string& ErrorMessage() const;
 	bool Valid() const;
-	void SetFormula(Formula newForm);
-	Status Status() const { return status; }
-	void NotifyOutOfDate(Address notificationSource);
+    void SetFormula(const Formula& newForm);
+    const Status& Status() const { return status; }
+    void NotifyOutOfDate(const Address& notificationSource);
 	void Update(bool removeDependencies = false);
 private:
 	Formula formula;

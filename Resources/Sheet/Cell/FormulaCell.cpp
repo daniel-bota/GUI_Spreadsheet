@@ -1,13 +1,13 @@
 #include "FormulaCell.h"
 
-std::variant<std::monostate, std::string, double> FormulaCell::GetUpdated()
+const std::variant<std::monostate, std::string, double>& FormulaCell::GetUpdated()
 {
     Update();
 
     return formula.Value();
 }
 
-std::variant<std::monostate, std::string, double> FormulaCell::Value() const
+const std::variant<std::monostate, std::string, double>& FormulaCell::Value() const
 {
     return formula.Value();
 }
@@ -39,13 +39,13 @@ bool FormulaCell::Valid() const
     return formula.Valid();
 }
 
-void FormulaCell::SetFormula(Formula newForm)
+void FormulaCell::SetFormula(const Formula& newForm)
 {
     formula = newForm;
     status = OutOfDate;
 }
 
-void FormulaCell::NotifyOutOfDate(Address notificationSource)
+void FormulaCell::NotifyOutOfDate(const Address& notificationSource)
 {
     if (notificationSource == this->address)
     {

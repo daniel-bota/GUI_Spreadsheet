@@ -21,10 +21,10 @@ public:
 	void Initialize(const std::map<Address, std::shared_ptr<Cell>>& importedValues = {});
 
 	void AddCell(std::shared_ptr<Cell> cell);
-    void AddCell(Address address, std::string input);
+    void AddCell(const Address& address, const std::string& input);
 
-	Address CellTitleToAddress(std::string title);
-	int ColTitleToIndex(std::string colTitle);
+    Address CellTitleToAddress(const std::string& title);
+    int ColTitleToIndex(const std::string& colTitle);
 
 	nlohmann::json Serialize();
 	bool Deserialize(const nlohmann::json& source);

@@ -37,25 +37,7 @@ std::string Misc::Trim(const std::string& input)
 	return firstChar < 0? "" : input.substr(firstChar, lastChar - firstChar + 1);
 }
 
-std::string Misc::ValueToDraw(bool header, bool text, std::string value, int cellW)
-{
-	int visible = value.size() <= cellW ? static_cast<int>(value.size()) : cellW;
-	int emptySpace = std::abs(cellW - visible);
-	int emptyLeftSide;
-	if (header)
-	{
-		emptyLeftSide = emptySpace / 2;
-	}
-	else
-	{
-		emptyLeftSide = text ? 0 : emptySpace;
-	}
-	int emptyRightSide = emptySpace - emptyLeftSide;
-
-	return std::format("{}{}{}", std::string(emptyLeftSide, ' '), value.substr(0, visible), std::string(emptyRightSide, ' '));
-}
-
-bool Misc::IsNumber(std::string input, double& output)
+bool Misc::IsNumber(const std::string& input, double& output)
 {
 	std::string result = Misc::Trim(input);
 	size_t charsProcessed;
