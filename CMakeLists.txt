@@ -21,8 +21,8 @@ qt_add_executable(appSpreadsheet_GUI
     Resources/Table/headers.cpp
     Resources/Table/table.h
     Resources/Table/table.cpp
-    Resources/UI/fileio.h
-    Resources/UI/fileio.cpp
+    Resources/IO/fileio.h
+    Resources/IO/fileio.cpp
     Resources/Sheet/Sheet.h
     Resources/Sheet/Sheet.cpp
     Resources/Sheet/Misc/Misc.h
