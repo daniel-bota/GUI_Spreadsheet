@@ -29,6 +29,8 @@ private:
 	std::string errorMessage{ "" };
 
     std::variant<std::monostate, std::string, double> Compute(const std::string& term, bool removeDependencies = false);
+    std::vector<std::string> SplitParameters(const std::string& term);
+    std::string ConsumeFirstParameter(std::string& term);
     std::variant<std::monostate, std::string, double> Compute(const std::string& formula, std::vector<std::string>& params, bool removeDependencies = false);
     std::variant<std::monostate, std::string, double> ComputeReference(const std::string& reference, bool removeDependencies);
 	std::variant<std::monostate, std::string, double> ComputeSum(const std::vector<std::string>& params, bool removeDependencies = false);
@@ -47,6 +49,7 @@ private:
     bool IsNumber(const std::string& input, double& output);
     bool IsReference(const std::string& input);
     bool IsRefRange(const std::string& input, std::vector<std::string>& output);
+    bool IsRefRange(const std::string& input);
 	bool CircularDependency(const Address& currentAddress, const Address& referencedAddress);
 };
 

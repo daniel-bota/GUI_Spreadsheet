@@ -57,19 +57,107 @@ std::variant<std::monostate, std::string, double> Formula::Compute(const std::st
 	std::string formula = input.substr(0, paramsStart);
 	formula = Misc::Trim(formula);
 
-	std::string paramsText = input.substr((paramsStart + 1), input.size());
-	paramsText.pop_back();
+    std::string paramsText = input.substr((paramsStart + 1), input.size());
+    paramsText.pop_back();
 	paramsText = Misc::Trim(paramsText);
 
-	std::vector<std::string> params = Misc::Split(paramsText, ';');
-	std::for_each(params.begin(), params.end(), [](std::string& param) { param = Misc::Trim(param); });
+    std::vector<std::string> params = SplitParameters(paramsText);
 
 	if (params.empty()) 
 	{ 
 		return Invalid("Invalid syntax!"," (missing formula parameters)");
 	}
 
-	return Compute(formula, params, removeDependencies);
+    return Compute(formula, params, removeDependencies);
+}
+
+std::vector<std::string> Formula::SplitParameters(const std::string &term)
+{
+    std::vector<std::string> result;
+    std::string input = term;
+
+    while (input != "")
+    {
+        auto arg = ConsumeFirstParameter(input);
+        result.push_back(arg);
+    }
+
+    return result;
+}
+
+std::string Formula::ConsumeFirstParameter(std::string &term)
+{
+    std::string result;
+
+    if (term[0] == '\"')
+    {
+        int stringEnd = term.find_first_of("\"");
+        result = term.substr(0, stringEnd + 1);
+        term = term.substr(stringEnd + 1, term.size());
+    }
+
+    else if (std::isalpha(term[0]) && term.find_first_of('(') < term.find_first_of(';'))
+    {
+        int doubleQuotes = 0;
+        int openParenthesis = 0;
+        int closedParenthesis = 0;
+
+        int formulaEnd = 0;
+
+        for (int i = 0; i < term.size(); i++)
+        {
+            if (doubleQuotes % 2 != 0)
+            {
+                continue;
+            }
+
+            if (openParenthesis && openParenthesis == closedParenthesis)
+            {
+                break;
+            }
+
+            if (term[i] == '(')
+            {
+                openParenthesis += 1;
+            }
+
+            if (term[i] == ')')
+            {
+                closedParenthesis += 1;
+            }
+
+            formulaEnd = i;
+        }
+
+        result = term.substr(0, formulaEnd + 1);
+        term = term.substr(formulaEnd + 1, term.size());
+    }
+
+    else
+    {
+        int argumentEnd = term.find_first_of(';');
+        result = argumentEnd == -1 ? term : term.substr(0, argumentEnd);
+        result = Misc::Trim(result);
+    }
+
+
+    if (term == "")
+    {
+        return result;
+    }
+
+    int paramEnd = term.find_first_of(';');
+
+    if (paramEnd == -1)
+    {
+        term = "";
+        return result;
+    }
+
+    term = term.substr(paramEnd + 1, term.size());
+    term = Misc::Trim(term);
+
+    return result;
 }
 
 std::variant<std::monostate, std::string, double> Formula::Compute(const std::string& formula, std::vector<std::string>& params, bool removeDependencies)
@@ -339,7 +427,8 @@ std::variant<std::monostate, std::string, double> Formula::Invalid(const std::st
 
 bool Formula::IsString(const std::string& input)
 {
-	return input.front() == '\"' && input.back() == '\"';
+    int quotesCount = std::ranges::count(input, '\"');
+    return quotesCount == 2 && input.front() == '\"' && input.back() == '\"';
 }
 
 bool Formula::IsNumber(const std::string& input, double& output)
@@ -389,8 +478,27 @@ bool Formula::IsRefRange(const std::string& input, std::vector<std::string>& out
 		}
 	}
 
-	output = refs;
-	return true;
+    output = refs;
+    return true;
+}
+
+bool Formula::IsRefRange(const std::string &input)
+{
+    int separatorIndex = static_cast<int>(input.find_first_of(':'));
+
+    if (separatorIndex <= 0)
+    {
+        return false;
+    }
+
+    std::vector<std::string> refs = Misc::Split(input, ':');
+    std::for_each(refs.begin(), refs.end(), [](std::string& ref) { ref = Misc::Trim(ref); });
+    for (const std::string& ref : refs)
+    {
+        if (!IsReference(ref)) { return false; }
+    }
+
+    return true;
 }
 
 bool Formula::CircularDependency(const Address& currentAddress, const Address& referencedAddress)
