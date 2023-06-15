@@ -30,3 +30,9 @@ Implemented formulas:
 - LENGTH (=LEN(arg1))
 - TRIM (=TRIM(arg1))
 - CONCATENATE (=CONCAT(arg1;arg2))
+
+Table navigation is possible using the arroy keys, Tab and the mouse. 
+
+Cell data can be input by typing straight away and commited by pressing Enter or Tab. The input can be dropped by pressing Esc. Cell contents can be edited using F2.  
+
+The columns and rows are resizable, but the changes remain available only for the current instance of the application, they don't get saved.
