@@ -12,6 +12,7 @@ QHash<int, QByteArray> CustomTableModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[Qt::DisplayRole] = "display";
+    roles[Qt::EditRole] = "edit";
     roles[CustomTableModel::Value] = "value";
     return roles;
 }
@@ -44,6 +45,16 @@ QVariant CustomTableModel::data(const QModelIndex &index, int role) const
 
     if (role == Qt::DisplayRole)
     {
+        return QString::fromStdString(cell->ValueString());
+    }
+
+    if (role == Qt::EditRole)
+    {
+        if (formulaCell)
+        {
+            return QString::fromStdString(formulaCell->Expression());
+        }
+
         return QString::fromStdString(cell->ValueString());
     }
 

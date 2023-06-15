@@ -23,7 +23,7 @@ TableView
     property int previousContentX: -1
     property int previousContentY: -1
 
-    property string editEvent: ""
+    property string editInput: ""
 
     function ensureRows()
     {
@@ -124,12 +124,12 @@ TableView
             }
 
             verticalAlignment: Text.AlignBottom
-            text: table.editEvent == "" ? display : table.editEvent
+            text: table.editInput == "" ? edit : table.editInput
 
             TableView.onCommit:
             {
                 display = text
-                table.editEvent = ""
+                table.editInput = ""
             }
         }
     }
@@ -151,13 +151,13 @@ TableView
         {
             if (event.text.length > 0)
             {
-                editEvent = event.text
+                editInput = event.text
                 edit(table.index(currentRow, currentColumn))
             }
 
             if (event.key === Qt.Key_F2)
             {
-                editEvent = event.text
+                editInput = event.text
                 edit(table.index(currentRow, currentColumn))
             }
         }
