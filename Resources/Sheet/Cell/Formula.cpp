@@ -281,8 +281,14 @@ std::variant<std::monostate, std::string, double> Formula::ComputeAverage(const 
 		return Invalid("Invalid syntax!");
 	}
 
-	auto size = std::get<double>(ComputeCount(params));
-	return std::get<double>(sum) / size;
+    auto size = std::get<double>(ComputeCount(params));
+
+    if (size == 0)
+    {
+        return Invalid("AVG: Can't divide by 0!");
+    }
+
+    return std::get<double>(sum) / size;
 }
 
 std::variant<std::monostate, std::string, double> Formula::ComputeMinMax(const std::vector<std::string>& params, bool min, bool removeDependencies)
