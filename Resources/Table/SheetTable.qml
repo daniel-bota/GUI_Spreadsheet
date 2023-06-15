@@ -90,6 +90,8 @@ TableView
         {
             id: textField
             anchors.fill: parent
+            color: "black"
+            font.pixelSize: 15
             text: model.display
             horizontalAlignment: typeof(value) === "number" ? Text.AlignRight : Text.AlignLeft
             verticalAlignment: Text.AlignBottom
@@ -116,6 +118,7 @@ TableView
             id: inputField
             anchors.fill: parent
             color: "black"
+            font.pixelSize: 15
 
             background: Rectangle
             {

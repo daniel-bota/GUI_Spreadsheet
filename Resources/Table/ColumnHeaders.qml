@@ -18,6 +18,15 @@ HorizontalHeaderView
     anchors.top: parent.top
 
     interactive: false
+    focus: false
+    enabled: true
+    keyNavigationEnabled: false
+
+    resizableColumns: true
+    syncView: table
+    clip: true
+
+    boundsMovement: Flickable.StopAtBounds
 
     delegate: Rectangle
     {
@@ -30,9 +39,4 @@ HorizontalHeaderView
             anchors.centerIn: parent
         }
     }
-    resizableColumns: true
-    syncView: table
-    clip: true
-
-    boundsMovement: Flickable.StopAtBounds
 }

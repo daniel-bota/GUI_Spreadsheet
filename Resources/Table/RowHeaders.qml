@@ -18,6 +18,15 @@ VerticalHeaderView
     anchors.top: columnHeaders.bottom
 
     interactive: false
+    focus: false
+    enabled: true
+    keyNavigationEnabled: false
+
+    resizableRows: true
+    syncView: table
+    clip: true
+
+    boundsMovement: Flickable.StopAtBounds
 
     delegate: Rectangle
     {
@@ -30,9 +39,4 @@ VerticalHeaderView
             anchors.centerIn: parent
         }
     }
-    resizableRows: true
-    syncView: table
-    clip: true
-
-    boundsMovement: Flickable.StopAtBounds
 }
