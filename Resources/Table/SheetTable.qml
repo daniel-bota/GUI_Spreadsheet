@@ -149,7 +149,7 @@ TableView
     Keys.onPressed:
         (event) =>
         {
-            if (event.text.length > 0)
+            if (event.text.length > 0 && event.key !== Qt.Key_Tab)
             {
                 editInput = event.text
                 edit(table.index(currentRow, currentColumn))
