@@ -98,6 +98,7 @@ TableView
             leftPadding: 4
             rightPadding: 4
             wrapMode: Text.Wrap
+            clip: true
         }
 
         MouseArea
