@@ -45,7 +45,6 @@ signals:
 
 private:
     const int m_headerBuffer = 26;
-    int anything;
     int m_visibleHeaders = 26;
     QString columnTitle(int index) const;
     QString rowTitle(int index) const;

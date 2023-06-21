@@ -287,7 +287,7 @@ void CustomTableModel::RefreshChangedCells(const Address& initialAddress, const 
 
 void CustomTableModel::clear()
 {
-    qDebug() << "table cleared";\
+    qDebug() << "table cleared";
 
     setSheet(Sheet());
 }
