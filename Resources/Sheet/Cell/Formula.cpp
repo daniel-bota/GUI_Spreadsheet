@@ -91,7 +91,8 @@ std::string Formula::ConsumeFirstParameter(std::string &term)
 
     if (term[0] == '\"')
     {
-        int stringEnd = term.find_first_of("\"");
+        std::string noStartingQuotes = ' ' + term.substr(1, term.size());
+        int stringEnd = noStartingQuotes.find_first_of("\"");
         result = term.substr(0, stringEnd + 1);
         term = term.substr(stringEnd + 1, term.size());
     }
