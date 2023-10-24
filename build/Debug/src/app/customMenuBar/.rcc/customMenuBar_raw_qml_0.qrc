@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/app/customMenuBar/">
-    <file alias="FileMenu.qml">C:/Users/botad/source/repos/Spreadsheet_GUI/src/app/customMenuBar/FileMenu.qml</file>
-  </qresource>
-</RCC>
-

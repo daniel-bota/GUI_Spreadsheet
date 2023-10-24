@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/src/io">
+    <file alias="qmldir">C:/Users/botad/source/repos/GUI_Spreadsheet/build/x64-Debug/src/io/qmldir</file>
+  </qresource>
+</RCC>
+

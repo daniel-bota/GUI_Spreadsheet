@@ -4,10 +4,10 @@
 #include <QAbstractTableModel>
 #include <QtSql/QSqlQueryModel>
 #include <QAbstractItemModel>
+#include <QObject>
 #include <QtQml/qqmlregistration.h>
 #include "qpoint.h"
 #include "qtmetamacros.h"
-#include <QObject>
 #include "Sheet.h"
 
 class CustomTableModel : public QAbstractTableModel
@@ -21,6 +21,8 @@ class CustomTableModel : public QAbstractTableModel
     Q_PROPERTY(QVariant lastRetrievedValue READ lastRetrievedValue CONSTANT)
 
     Q_PROPERTY(Sheet sheet READ sheet WRITE setSheet NOTIFY sheetChanged)
+
+    QML_ELEMENT
 
 public:
     explicit CustomTableModel(QObject* parent = nullptr);

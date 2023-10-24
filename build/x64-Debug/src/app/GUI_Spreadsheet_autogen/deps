@@ -1,0 +1,24 @@
+GUI_Spreadsheet_autogen/timestamp: \
+	C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in \
+	C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Qml/Qt6QmlModuleDirMappingTemplate.qrc.in \
+	C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Qml/Qt6qmldirTemplate.cmake.in \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/build/x64-Debug/src/app/.rcc/qmlcache/GUI_Spreadsheet_qmlcache_loader.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/app/CMakeLists.txt \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/app/main.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/Cell.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/Cell.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/Formula.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/Formula.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/FormulaCell.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/FormulaCell.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/NumericCell.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/NumericCell.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/TextCell.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/cell/TextCell.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Address.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Area.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Area.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Coordinates.cpp \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Coordinates.h \
+	C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/coordinates/Position.h \
+	C:/Qt/Tools/CMake_64/bin/cmake.exe

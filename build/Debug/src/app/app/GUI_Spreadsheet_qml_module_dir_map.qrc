@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/app">C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app/app</file>
-
-  </qresource>
-</RCC>

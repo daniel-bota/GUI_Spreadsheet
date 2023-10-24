@@ -1,0 +1,318 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "src/app/customMenuBar/CMakeFiles/CustomMenuBarplugin_init.dir/./CustomMenuBarplugin_init_autogen/mocs_compilation.cpp.obj"
+		},
+		{
+			"path" : "src/app/customMenuBar/CMakeFiles/CustomMenuBarplugin_init.dir/./CustomMenuBarplugin_init.cpp.obj"
+		}
+	],
+	"backtrace" : 6,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"_qt_internal_add_library",
+			"qt6_add_library",
+			"__qt_internal_add_static_plugin_init_object_library",
+			"qt6_add_qml_module",
+			"qt_add_qml_module",
+			"set_property",
+			"_qt_internal_copy_dependency_properties",
+			"__qt_internal_propagate_object_library"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+			"C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"src/app/customMenuBar/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 716,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 650,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 258,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2295,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2369,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 654,
+				"parent" : 2
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1674,
+				"parent" : 7
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2474,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2474,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2474,
+				"parent" : 8
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 2474,
+				"parent" : 8
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Zc:__cplusplus"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-permissive-"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-utf-8"
+				},
+				{
+					"fragment" : "-std:c++latest"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 10,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_DEPRECATED_WARNINGS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_NETWORK_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_PLUGIN"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QMLINTEGRATION_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_QML_LIB"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "QT_STATICPLUGIN"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "UNICODE"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "WIN32"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "WIN64"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "_UNICODE"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "_WIN64"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "C:/Users/botad/source/repos/GUI_Spreadsheet/build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_init_autogen/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/botad/source/repos/GUI_Spreadsheet/build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_autogen/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/include/QtQml"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/include/QtQmlIntegration"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/include/QtNetwork"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/include"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/include/QtCore"
+				},
+				{
+					"backtrace" : 11,
+					"isSystem" : true,
+					"path" : "C:/Qt/6.6.0/msvc2019_64/mkspecs/win32-msvc"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					12,
+					12
+				],
+				"standard" : "23"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "CustomMenuBarplugin_init_autogen_timestamp_deps::@c754a6d36819f9bc9ad4"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "CustomMenuBarplugin_init_autogen::@c754a6d36819f9bc9ad4"
+		}
+	],
+	"id" : "CustomMenuBarplugin_init::@c754a6d36819f9bc9ad4",
+	"name" : "CustomMenuBarplugin_init",
+	"paths" : 
+	{
+		"build" : "src/app/customMenuBar",
+		"source" : "src/app/customMenuBar"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_init_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 6,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_init.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_init_autogen/timestamp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CustomMenuBarplugin_init_autogen/timestamp.rule",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

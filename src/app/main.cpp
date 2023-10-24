@@ -2,9 +2,12 @@
 #include <QQmlApplicationEngine>
 #include <QAbstractTableModel>
 
-#include "Headers.h"
-#include "Table.h"
-#include "FileIO.h"
+//#include <QtQml/QQmlExtensionPlugin>
+//Q_IMPORT_QML_PLUGIN(CustomMenuBarplugin)
+
+//#include "Headers.h"
+//#include "Table.h"
+//#include "FileIO.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,10 +26,10 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    engine.addImportPath("qrc:/qt/qml/app");
-    auto pathList = engine.importPathList();
+//    engine.addImportPath("qrc:/qt/qml/src/app");
+//    auto pathList = engine.importPathList();
 
-    const QUrl url(u"qrc:qt/qml/app/Main.qml"_qs);
+    const QUrl url(u"qrc:qt/qml/src/app/Main.qml"_qs);
     QObject::connect(
         &engine, &QQmlApplicationEngine::objectCreated, &app,
         [url](QObject *obj, const QUrl &objUrl) {
@@ -36,6 +39,7 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
 
     engine.load(url);
+//    engine.load(QUrl(u"qrc:qt/qml/src/app/customMenuBar/CustomMenuBar.qml"_qs));
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

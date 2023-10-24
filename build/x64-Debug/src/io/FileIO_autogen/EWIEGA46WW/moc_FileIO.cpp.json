@@ -1,0 +1,85 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
+            "className": "FileIO",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "read",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "output",
+                            "type": "nlohmann::json"
+                        }
+                    ],
+                    "name": "write",
+                    "returnType": "bool"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "activeFilePath",
+                    "notify": "activeFilePathChanged",
+                    "read": "activeFilePath",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QUrl",
+                    "user": false,
+                    "write": "setActiveFilePath"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "activeFile",
+                    "notify": "activeFileChanged",
+                    "read": "activeFile",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "nlohmann::json",
+                    "user": false,
+                    "write": "setActiveFile"
+                }
+            ],
+            "qualifiedClassName": "FileIO",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "activeFilePathChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "activeFileChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "FileIO.h",
+    "outputRevision": 68
+}

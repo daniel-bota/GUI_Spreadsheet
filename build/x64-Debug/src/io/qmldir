@@ -1,0 +1,7 @@
+module src.io
+linktarget FileIOplugin
+optional plugin FileIOplugin
+classname src_ioPlugin
+typeinfo FileIO.qmltypes
+prefer :/qt/qml/src/io/
+

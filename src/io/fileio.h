@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QUrl>
+#include <QtQml/qqmlregistration.h>
 #include "nlohmann/json.hpp"
 
 class FileIO : public QObject
@@ -10,7 +11,7 @@ class FileIO : public QObject
     Q_OBJECT
     Q_PROPERTY(QUrl activeFilePath READ activeFilePath WRITE setActiveFilePath NOTIFY activeFilePathChanged)
     Q_PROPERTY(nlohmann::json activeFile READ activeFile WRITE setActiveFile NOTIFY activeFileChanged)
-
+    QML_ELEMENT
 public:
     explicit FileIO(QObject *parent = nullptr);
 

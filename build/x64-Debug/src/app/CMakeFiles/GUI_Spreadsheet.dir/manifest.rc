@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/botad/source/repos/GUI_Spreadsheet/build/x64-Debug/src/app/CMakeFiles/GUI_Spreadsheet.dir/embed.manifest"

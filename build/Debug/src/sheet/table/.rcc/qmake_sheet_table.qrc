@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/sheet/table">
-    <file alias="qmldir">C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/sheet/table/qmldir</file>
-  </qresource>
-</RCC>
-
