@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QUrl>
-#include <nlohmann/json.hpp>
+#include "nlohmann/json.hpp"
 
 class FileIO : public QObject
 {

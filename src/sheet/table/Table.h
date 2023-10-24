@@ -8,7 +8,7 @@
 #include "qpoint.h"
 #include "qtmetamacros.h"
 #include <QObject>
-#include "../Sheet/Sheet.h"
+#include "Sheet.h"
 
 class CustomTableModel : public QAbstractTableModel
 {

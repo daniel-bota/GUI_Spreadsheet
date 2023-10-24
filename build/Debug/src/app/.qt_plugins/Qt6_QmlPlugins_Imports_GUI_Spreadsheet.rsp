@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/botad/source/repos/Spreadsheet_GUI/src/app
+-cmake-output
+-output-file
+C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app/.qt_plugins/Qt6_QmlPlugins_Imports_GUI_Spreadsheet.cmake
+-importPath
+C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app/app
+-importPath
+C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app
+-importPath
+C:/Qt/6.6.0/msvc2019_64/./qml
+-qrcFiles
+C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app/.rcc/qmake_app.qrc
+C:/Users/botad/source/repos/Spreadsheet_GUI/build/Debug/src/app/.rcc/GUI_Spreadsheet_raw_qml_0.qrc

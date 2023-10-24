@@ -1,4 +1,4 @@
-qt_add_library(Sheet STATIC
+target_sources(Sheet PUBLIC
     Coordinates.h
     Area.h
     Address.h
@@ -7,4 +7,4 @@ qt_add_library(Sheet STATIC
     Area.cpp
 )
 
-target_include_directories(Sheet INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(Sheet PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

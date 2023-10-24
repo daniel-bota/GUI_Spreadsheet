@@ -1,9 +1,9 @@
 #include "Sheet.h"
-#include "Cell/Formula.h"
-#include "Cell/FormulaCell.h"
-#include "Cell/TextCell.h"
-#include "Cell/NumericCell.h"
-#include "Misc/Misc.h"
+#include "Formula.h"
+#include "FormulaCell.h"
+#include "TextCell.h"
+#include "NumericCell.h"
+#include "StringUtility.h"
 
 void Sheet::AddCell(const Address& address, const std::string& input)
 {

@@ -1,0 +1,10 @@
+module sheet.table
+linktarget tableplugin
+optional plugin tableplugin
+classname sheet_tablePlugin
+typeinfo table.qmltypes
+prefer :/qt/qml/sheet/table/
+ColumnHeaders 1.0 ColumnHeaders.qml
+RowHeaders 1.0 RowHeaders.qml
+SheetTable 1.0 SheetTable.qml
+

@@ -1,0 +1,5 @@
+module app
+typeinfo GUI_Spreadsheet.qmltypes
+prefer :/qt/qml/app/
+Main 1.0 Main.qml
+

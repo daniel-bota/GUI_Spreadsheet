@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "library/json-for-modern-cpp-3.11.2",
+		"source" : "library/json-for-modern-cpp-3.11.2"
+	}
+}

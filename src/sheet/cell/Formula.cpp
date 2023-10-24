@@ -1,7 +1,7 @@
 #include "Formula.h"
-#include "../Sheet.h"
+#include "Sheet.h"
 #include "FormulaCell.h"
-#include "../Misc/Misc.h"
+#include "StringUtility.h"
 
 Formula::Formula(Sheet* sheet, const Address& address, const std::string& expression) : sheet(sheet), address(address), expression(expression)
 {

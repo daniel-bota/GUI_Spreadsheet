@@ -1,0 +1,74 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"_qt_internal_add_library",
+			"qt6_add_library",
+			"qt_add_library"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"library/json-for-modern-cpp-3.11.2/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 2391,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 2295,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2369,
+				"parent" : 3
+			}
+		]
+	},
+	"id" : "NLohmannJson::@904f42e2e6e44e1951a9",
+	"name" : "NLohmannJson",
+	"paths" : 
+	{
+		"build" : "library/json-for-modern-cpp-3.11.2",
+		"source" : "library/json-for-modern-cpp-3.11.2"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 4,
+			"path" : "library/json-for-modern-cpp-3.11.2/nlohmann/json.hpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "INTERFACE_LIBRARY"
+}

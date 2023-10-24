@@ -1,7 +1,7 @@
 #include "Cell.h"
-#include "../Sheet.h"
-#include "../Misc/Misc.h"
-#include "Resources/Sheet/Cell/FormulaCell.h"
+#include "Sheet.h"
+#include "StringUtility.h"
+#include "FormulaCell.h"
 #include <format>
 
 Cell::Cell(Address address, Sheet* sheet) : address(address), sheet(sheet)

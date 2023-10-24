@@ -1,4 +1,4 @@
-qt_add_library(Sheet STATIC
+target_sources(Sheet PUBLIC
     Cell.h
     NumericCell.h
     TextCell.h
@@ -11,4 +11,4 @@ qt_add_library(Sheet STATIC
     Formula.cpp
 )
 
-target_include_directories(Sheet INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(Sheet PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
