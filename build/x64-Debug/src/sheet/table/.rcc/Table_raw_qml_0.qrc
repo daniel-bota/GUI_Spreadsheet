@@ -1,8 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/src/sheet/table/">
-    <file alias="ColumnHeaders.qml">C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/table/ColumnHeaders.qml</file>
-    <file alias="RowHeaders.qml">C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/table/RowHeaders.qml</file>
-    <file alias="SheetTable.qml">C:/Users/botad/source/repos/GUI_Spreadsheet/src/sheet/table/SheetTable.qml</file>
-  </qresource>
-</RCC>
-
