@@ -1,0 +1,8 @@
+module src.app.customMenuBar
+linktarget CustomMenuBarplugin
+optional plugin CustomMenuBarplugin
+classname src_app_customMenuBarPlugin
+typeinfo CustomMenuBar.qmltypes
+prefer :/qt/qml/src/app/customMenuBar/
+FileMenu 1.0 FileMenu.qml
+

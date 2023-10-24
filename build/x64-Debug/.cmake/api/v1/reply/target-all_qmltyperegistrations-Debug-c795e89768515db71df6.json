@@ -1,0 +1,171 @@
+{
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"_qt_internal_qml_type_registration",
+			"qt6_add_qml_module",
+			"qt_add_qml_module",
+			"add_dependencies"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.6.0/msvc2019_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake",
+			"src/io/CMakeLists.txt",
+			"src/app/CMakeLists.txt",
+			"src/sheet/table/CMakeLists.txt",
+			"src/app/customMenuBar/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 716,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 540,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2608,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2611,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 7,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 716,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 540,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2611,
+				"parent" : 9
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 12,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 716,
+				"parent" : 12
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 540,
+				"parent" : 13
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2611,
+				"parent" : 14
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 3,
+				"parent" : 16
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 716,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 540,
+				"parent" : 18
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2611,
+				"parent" : 19
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "FileIO_qmltyperegistration::@8c9074cf2e563e673ee9"
+		},
+		{
+			"backtrace" : 10,
+			"id" : "GUI_Spreadsheet_qmltyperegistration::@ff93792cf40911dae1b8"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "Table_qmltyperegistration::@c92f8ebe9295d607f9c3"
+		},
+		{
+			"backtrace" : 20,
+			"id" : "CustomMenuBar_qmltyperegistration::@c754a6d36819f9bc9ad4"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "all_qmltyperegistrations::@8c9074cf2e563e673ee9",
+	"name" : "all_qmltyperegistrations",
+	"paths" : 
+	{
+		"build" : "src/io",
+		"source" : "src/io"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

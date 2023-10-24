@@ -1,0 +1,68 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/app/customMenuBar/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "FileIOplugin::@8c9074cf2e563e673ee9"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "CustomMenuBar_autogen_timestamp_deps::@c754a6d36819f9bc9ad4",
+	"isGeneratorProvided" : true,
+	"name" : "CustomMenuBar_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/app/customMenuBar",
+		"source" : "src/app/customMenuBar"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CMakeFiles/CustomMenuBar_autogen_timestamp_deps",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/x64-Debug/src/app/customMenuBar/CMakeFiles/CustomMenuBar_autogen_timestamp_deps.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
