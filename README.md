@@ -1,4 +1,4 @@
-A simple QtQuick implementation of a spreadsheet application with limited functionality. You can watch a short demonstration on [![Youtube](https://i.ytimg.com/vi/Q5gcqy2bhkM/hqdefault.jpg)](https://youtu.be/Q5gcqy2bhkM).
+A simple QtQuick implementation of a spreadsheet application with limited functionality. You can watch a short demonstration on Youtube! [![Youtube](https://i.ytimg.com/vi/Q5gcqy2bhkM/hqdefault.jpg)](https://youtu.be/Q5gcqy2bhkM).
 
 This project uses [Qt 6.6.0](https://www.qt.io/offline-installers).
 
